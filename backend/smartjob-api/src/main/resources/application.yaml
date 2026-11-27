@@ -1,16 +1,19 @@
 spring:
-  datasource:
-    username: smartjob_user
-    url: jdbc:mysql://localhost:3306/smartjob_db
-    password: SmartJob@2026
   application:
     name: smartjob-api
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/smartjob_db
+    username: smartjob_user
+    password: "SmartJob@2026"
+
   jpa:
-    properties:
-      hibernate:
-        format_sql: 'true'
     hibernate:
       ddl-auto: update
-    show-sql: 'true'
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
 server:
-  port: '8080'
+  port: 8080
